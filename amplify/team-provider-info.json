@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-scorcher-dev-134502-authRole",
+      "UnauthRoleArn": "arn:aws:iam::258208292471:role/amplify-scorcher-dev-134502-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::258208292471:role/amplify-scorcher-dev-134502-authRole",
+      "Region": "eu-west-2",
+      "DeploymentBucketName": "amplify-scorcher-dev-134502-deployment",
+      "UnauthRoleName": "amplify-scorcher-dev-134502-unauthRole",
+      "StackName": "amplify-scorcher-dev-134502",
+      "StackId": "arn:aws:cloudformation:eu-west-2:258208292471:stack/amplify-scorcher-dev-134502/3478ad50-6290-11ed-ba1f-061a304e5716",
+      "AmplifyAppId": "dgf3sj2nd7eeo"
+    },
+    "categories": {
+      "auth": {
+        "scorcher": {}
+      }
+    }
+  }
+}
