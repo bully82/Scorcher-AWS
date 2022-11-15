@@ -1,8 +1,8 @@
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
 //import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
-import Groups from "./screens/groups";
-import Home from "./screens/home";
-import History from "./screens/results";
+import Groups from "../../screens/groups";
+import Home from "../../screens/home";
+import History from "../../screens/history";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 const Tab = createMaterialBottomTabNavigator();

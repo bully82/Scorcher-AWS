@@ -7,14 +7,24 @@ import { withAuthenticator } from "aws-amplify-react-native";
 Amplify.configure(awsconfig);
 
 import { NavigationContainer } from "@react-navigation/native";
-//import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
-//import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
-//import Groups from "./screens/groups";
-//import Home from "./screens/home";
-//import History from "./screens/results";
-import MyTabs from "./TabNavigator";
+import MyTabs from "./assets/components/TabNavigator";
+
+import {
+  useFonts,
+  DMSans_400Regular,
+  DMSans_700Bold,
+} from "@expo-google-fonts/dm-sans";
 
 function App() {
+  let [fontsLoaded] = useFonts({
+    DMSans_400Regular,
+    DMSans_700Bold,
+  });
+
+  if (!fontsLoaded) {
+    return null;
+  }
+
   return (
     <NavigationContainer>
       <MyTabs />
