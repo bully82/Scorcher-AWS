@@ -1,23 +1,19 @@
-import * as React from "react";
-import { Drawer } from "react-native-paper";
+import React from "react";
+import { NavigationContainer } from "@react-navigation/native";
+import Home from "../../screens/home";
+import History from "../../screens/history";
 
-const DrawerRight = () => {
-  const [active, setActive] = React.useState("");
+const Drawer = createDrawerNavigator();
 
+function DrawerRight() {
   return (
-    <Drawer.Section title="Options">
-      <Drawer.Item
-        label="First Item"
-        active={active === "first"}
-        onPress={() => setActive("first")}
-      />
-      <Drawer.Item
-        label="Second Item"
-        active={active === "second"}
-        onPress={() => setActive("second")}
-      />
-    </Drawer.Section>
+    <NavigationContainer>
+      <Drawer.Navigator initialRouteName="Home">
+        <Drawer.Screen name="Home" component={Home} />
+        <Drawer.Screen name="Notifications" component={History} />
+      </Drawer.Navigator>
+    </NavigationContainer>
   );
-};
+}
 
 export default DrawerRight;

@@ -6,8 +6,9 @@ import { withAuthenticator } from "aws-amplify-react-native";
 
 Amplify.configure(awsconfig);
 
+//Navigation
 import { NavigationContainer } from "@react-navigation/native";
-import MyTabs from "./assets/components/TabNavigator";
+import BottomTabNav from "./assets/components/bottomTabNavigator";
 
 import {
   useFonts,
@@ -27,7 +28,7 @@ function App() {
 
   return (
     <NavigationContainer>
-      <MyTabs />
+      <BottomTabNav />
     </NavigationContainer>
   );
 }
