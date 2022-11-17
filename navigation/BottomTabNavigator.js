@@ -1,45 +1,73 @@
 import * as React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Text, StyleSheet } from "react-native";
-import Icon from "react-native-vector-icons/FontAwesome";
-
+import { MaterialCommunityIcons } from "@expo/vector-icons";
 import GroupStackNavigator from "./stack-navigators/GroupStack";
 import HomeStackNavigator from "./stack-navigators/HomeStack";
 import NotificationStackNavigator from "./stack-navigators/NotificationsStack";
+import HistoryNavigator from "./stack-navigators/HistoryStack";
 
 const Tab = createBottomTabNavigator();
 
 const BottomTabNavigator = () => {
   return (
-    <Tab.Navigator screenOptions={{ headerShown: false }}>
+    <Tab.Navigator
+      screenOptions={{
+        headerShown: false,
+        tabBarStyle: {
+          backgroundColor: "#202020",
+        },
+        tabBarShowLabel: false,
+        tabBarActiveTintColor: "#e43301",
+        tabBarInactiveTintColor: "#ffffff",
+      }}
+    >
       <Tab.Screen
         name="HomeStack"
         component={HomeStackNavigator}
         options={{
-          tabBarIcon: ({ focused }) => (
-            <Icon name="home" size={30} color={focused ? "#551E18" : "#000"} />
+          tabBarLabel: "Home",
+          tabBarIcon: ({ color }) => (
+            <MaterialCommunityIcons name="home" color={color} size={22} />
           ),
-          tabBarLabel: () => <Text style={styles.tabBarLabel}>Home</Text>,
         }}
       />
       <Tab.Screen
         name="Groups"
         component={GroupStackNavigator}
         options={{
-          tabBarIcon: ({ focused }) => (
-            <Icon name="bed" size={30} color={focused ? "#551E18" : "#000"} />
+          tabBarLabel: "Groups",
+          tabBarIcon: ({ color }) => (
+            <MaterialCommunityIcons
+              name="account-group"
+              color={color}
+              size={22}
+            />
           ),
-          tabBarLabel: () => <Text style={styles.tabBarLabel}>Book Room</Text>,
         }}
       />
       <Tab.Screen
-        name="ContactStack"
+        name="HistoryStack"
+        component={HistoryNavigator}
+        options={{
+          tabBarLabel: "History",
+          tabBarIcon: ({ color }) => (
+            <MaterialCommunityIcons name="history" color={color} size={22} />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="NotifciationStack"
         component={NotificationStackNavigator}
         options={{
-          tabBarIcon: ({ focused }) => (
-            <Icon name="phone" size={30} color={focused ? "#551E18" : "#000"} />
+          tabBarLabel: "Groups",
+          tabBarIcon: ({ color }) => (
+            <MaterialCommunityIcons
+              name="chat-processing-outline"
+              color={color}
+              size={22}
+            />
           ),
-          tabBarLabel: () => <Text style={styles.tabBarLabel}>Contact Us</Text>,
         }}
       />
     </Tab.Navigator>
@@ -48,7 +76,7 @@ const BottomTabNavigator = () => {
 
 const styles = StyleSheet.create({
   tabBarLabel: {
-    color: "#292929",
+    color: "#202020",
     fontSize: 12,
   },
 });

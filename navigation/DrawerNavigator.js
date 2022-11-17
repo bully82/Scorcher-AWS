@@ -6,10 +6,11 @@ import {
   DrawerItem,
 } from "@react-navigation/drawer";
 import Icon from "react-native-vector-icons/FontAwesome";
+import Icon2 from "react-native-vector-icons/Feather";
 
 import BottomTabNavigator from "./BottomTabNavigator";
-import NotificationStackNavigator from "./stack-navigators/NotificationsStack";
 import HomeStackNavigator from "./stack-navigators/HomeStack";
+import AboutStackNavigator from "./stack-navigators/AboutStack";
 
 const Drawer = createDrawerNavigator();
 
@@ -47,7 +48,7 @@ const DrawerNavigator = () => {
     <Drawer.Navigator
       screenOptions={({ navigation }) => ({
         headerStyle: {
-          backgroundColor: "#551E18",
+          backgroundColor: "#202020",
           height: 50,
         },
         headerLeft: () => (
@@ -55,7 +56,7 @@ const DrawerNavigator = () => {
             onPress={() => navigation.toggleDrawer()}
             style={styles.headerLeft}
           >
-            <Icon name="bars" size={20} color="#fff" />
+            <Icon2 name="info" size={22} color="#fff" />
           </TouchableOpacity>
         ),
       })}
@@ -65,23 +66,24 @@ const DrawerNavigator = () => {
         name="HomeTabs"
         component={BottomTabNavigator}
         options={{
+          headerTitleAlign: "center",
           title: "Home",
           headerTitle: () => (
             <Image source={require("../assets/images/favicon.png")} />
           ),
           headerRight: () => (
             <View style={styles.headerRight}>
-              <Icon name="bell" size={20} color="#fff" />
+              <Icon name="bars" size={22} color="#fff" />
             </View>
           ),
         }}
       />
       <Drawer.Screen
-        name="Notification"
-        component={NotificationStackNavigator}
+        name="About"
+        component={AboutStackNavigator}
         options={{
-          title: "My Rewards",
-          headerTitle: () => <Text style={styles.headerTitle}>My Rewards</Text>,
+          title: "About",
+          headerTitle: () => <Text style={styles.headerTitle}>About</Text>,
         }}
       />
       <Drawer.Screen
