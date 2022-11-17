@@ -1,11 +1,11 @@
 import { View, Text } from "react-native";
 
-function Groups() {
+function GroupScreen() {
   return (
-    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <Text>Groups</Text>
+    <View>
+      <Text>list of associated groups</Text>
     </View>
   );
 }
 
-export default Groups;
+export default GroupScreen;
