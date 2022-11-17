@@ -1,3 +1,4 @@
+import { DMSans_700Bold } from "@expo-google-fonts/dm-sans";
 import { useFonts } from "expo-font";
 import { StyleSheet } from "react-native";
 
@@ -9,6 +10,7 @@ export const globalStyles = StyleSheet.create({
   titleText: {
     flex: 1,
     fontSize: 18,
+    useFonts: DMSans_700Bold,
   },
   paragraph: {
     flex: 1,

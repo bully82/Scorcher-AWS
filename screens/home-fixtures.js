@@ -1,12 +1,12 @@
 import { View, Text } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
-function HistoryScreen() {
+function Fixtures() {
   return (
     <SafeAreaView>
-      <Text>GAME MODES</Text>
+      <Text>Fixture List</Text>
     </SafeAreaView>
   );
 }
 
-export default HistoryScreen;
+export default Fixtures;

@@ -1,7 +1,7 @@
 import { View, Text } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
-function HistoryScreen() {
+function AboutScreen() {
   return (
     <SafeAreaView>
       <Text>GAME MODES</Text>
@@ -9,4 +9,4 @@ function HistoryScreen() {
   );
 }
 
-export default HistoryScreen;
+export default AboutScreen;

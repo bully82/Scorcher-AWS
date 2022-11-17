@@ -1,10 +1,16 @@
-import { View, Text } from "react-native";
+import React from "react";
+import { Text, Button } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 
-function GroupScreen() {
+function GroupScreen({ navigation }) {
   return (
-    <View>
-      <Text>list of associated groups</Text>
-    </View>
+    <SafeAreaView>
+      <Text>Group</Text>
+      <Button
+        title="League Fixtures"
+        onPress={() => navigation.navigate("MyGroups")}
+      />
+    </SafeAreaView>
   );
 }
 
