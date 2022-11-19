@@ -42,7 +42,7 @@ const CustomDrawerContent = (props) => {
   );
 };
 
-const DrawerNavigator = () => {
+const DrawerNavigator1 = () => {
   return (
     <Drawer.Navigator
       screenOptions={({ navigation }) => ({
@@ -128,4 +128,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default DrawerNavigator;
+export default DrawerNavigator1;
