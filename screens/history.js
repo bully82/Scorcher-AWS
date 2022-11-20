@@ -4,7 +4,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 function HistoryScreen() {
   return (
     <SafeAreaView>
-      <Text>GAME MODES</Text>
+      <Text>Results and games in play etc</Text>
     </SafeAreaView>
   );
 }

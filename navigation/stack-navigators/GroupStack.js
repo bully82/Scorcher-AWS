@@ -8,12 +8,21 @@ const Stack = createNativeStackNavigator();
 function GroupStackNavigator() {
   return (
     <Stack.Navigator
+      initialRouteName="Groups"
       screenOptions={{
-        headerShown: false,
+        headerShown: true,
       }}
     >
-      <Stack.Screen name="Groups" component={GroupScreen} />
-      <Stack.Screen name="MyGroups" component={MyGroups} />
+      <Stack.Screen
+        name="Groups"
+        component={GroupScreen}
+        options={{ headerShown: true }}
+      />
+      <Stack.Screen
+        name="MyGroups"
+        component={MyGroups}
+        options={{ headerShown: true }}
+      />
     </Stack.Navigator>
   );
 }

@@ -1,10 +1,12 @@
-import { Text } from "react-native";
+import { Text, StatusBar } from "react-native";
+import GlobalStyle from "../Styles/GlobalStyle";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 function HomeScreen() {
   return (
     <SafeAreaView>
-      <Text>Home Screen</Text>
+      <StatusBar style="auto" />
+      <Text style={[GlobalStyle.CustomFont]}>Game Modes</Text>
     </SafeAreaView>
   );
 }

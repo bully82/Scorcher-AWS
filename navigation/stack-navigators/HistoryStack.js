@@ -9,7 +9,7 @@ function HistoryNavigator() {
   return (
     <Stack.Navigator
       screenOptions={{
-        headerShown: false,
+        headerShown: true,
       }}
     >
       <Stack.Screen name="History" component={HistoryScreen} />

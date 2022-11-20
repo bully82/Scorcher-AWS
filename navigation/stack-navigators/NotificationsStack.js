@@ -10,7 +10,7 @@ function NotificationStackNavigator() {
   return (
     <Stack.Navigator
       screenOptions={{
-        headerShown: false,
+        headerShown: true,
       }}
     >
       <Stack.Screen name="Notifications" component={NotoficationScreen} />

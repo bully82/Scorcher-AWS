@@ -5,11 +5,11 @@ import { SafeAreaView } from "react-native-safe-area-context";
 function GroupScreen({ navigation }) {
   return (
     <SafeAreaView>
-      <Text>Group</Text>
       <Button
         title="League Fixtures"
         onPress={() => navigation.navigate("MyGroups")}
       />
+      <Text>list of groups and national league</Text>
     </SafeAreaView>
   );
 }

@@ -1,11 +1,13 @@
 import * as React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { Text, StyleSheet } from "react-native";
+import { Text, StyleSheet, Button } from "react-native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import GroupStackNavigator from "./stack-navigators/GroupStack";
 import HomeStackNavigator from "./stack-navigators/HomeStack";
 import NotificationStackNavigator from "./stack-navigators/NotificationsStack";
 import HistoryNavigator from "./stack-navigators/HistoryStack";
+import DrawerNavigator from "./DrawerNavigator";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 const Tab = createBottomTabNavigator();
 
@@ -14,17 +16,17 @@ const BottomTabNavigator = () => {
     <Tab.Navigator
       screenOptions={{
         headerShown: false,
-        tabBarStyle: {
-          backgroundColor: "#202020",
-        },
+        // tabBarStyle: {
+        // backgroundColor: "#000000",
+        //},
         tabBarShowLabel: false,
-        tabBarActiveTintColor: "#e43301",
-        tabBarInactiveTintColor: "#ffffff",
+        tabBarActiveTintColor: "#aa00f7",
+        tabBarInactiveTintColor: "#2c2a2b",
       }}
     >
       <Tab.Screen
         name="HomeStack"
-        component={HomeStackNavigator}
+        component={DrawerNavigator}
         options={{
           tabBarLabel: "Home",
           tabBarIcon: ({ color }) => (
@@ -62,11 +64,7 @@ const BottomTabNavigator = () => {
         options={{
           tabBarLabel: "Groups",
           tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons
-              name="chat-processing-outline"
-              color={color}
-              size={22}
-            />
+            <MaterialCommunityIcons name="bell" color={color} size={22} />
           ),
         }}
       />
